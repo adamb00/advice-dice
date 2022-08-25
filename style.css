@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root {
+  --ff: 'Manrope', sans-serif;
+  --fs: 28px;
+  --color-primary-light-cyan: hsl(193, 38%, 86%);
+  --color-primary-neon-green: hsl(150, 100%, 66%);
+  --color-secondary-grayish-blue: hsl(217, 19%, 38%);
+  --color-secondary-dark-grayish-blue: hsl(217, 19%, 24%);
+  --color-secondary-dark-blue: hsl(218, 23%, 16%);
+  --color-neon: hsla(150, 100%, 66%, 0.8);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  background-color: #000;
+  color: var(--color-primary-light-cyan);
+  display: block;
+}
+.container {
+  max-width: 1400px;
+  width: auto;
+  background-color: var(--color-secondary-dark-blue);
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 130px;
+}
+.adviceContainer {
+  display: block;
+  position: relative;
+  text-align: center;
+  /* margin: 130px; */
+  padding: 50px;
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: var(--color-secondary-dark-grayish-blue);
+}
+.adviceID {
+  color: var(--color-primary-neon-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding-top: 30px;
+}
+.adviceText {
+  padding: 20px;
+  font-size: var(--fs);
+}
+.divider {
+  position: relative;
+  content: '';
+  height: 20px;
+  width: 100%;
+  background: url(./images/pattern-divider-desktop.svg) no-repeat center;
+}
+.btnDice {
+  padding: 20px;
+  border-radius: 100px;
+  border: none;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--color-primary-neon-green);
+  background-image: url(./images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+}
+
+.btnDice:hover {
+  box-shadow: var(--color-neon) 0px 22px 70px 4px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
+  .container {
+    max-width: auto;
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0;
+  }
+  .adviceContainer {
+    max-width: auto;
+    width: 90%;
+    margin: 40px auto;
+  }
+}
